@@ -1,0 +1,404 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cla",
+				"cla\tclass .. end"
+			],
+			[
+				"cl",
+				"cla\tclass .. end"
+			],
+			[
+				"di",
+				"disabled\tAttr"
+			],
+			[
+				"a",
+				"a\t<a>"
+			],
+			[
+				"mult",
+				"multiply_and_add"
+			],
+			[
+				"sub",
+				"subtest"
+			],
+			[
+				"return",
+				"return_array_and_hash"
+			],
+			[
+				"retun",
+				"return_pop_values"
+			],
+			[
+				"global",
+				"global_variable"
+			],
+			[
+				"retu",
+				"return_global_variable"
+			],
+			[
+				"globa",
+				"global_variable"
+			],
+			[
+				"sec",
+				"secret_variable"
+			],
+			[
+				"inc",
+				"increment_secret_variable"
+			],
+			[
+				"sc",
+				"secret_variable"
+			],
+			[
+				"su",
+				"subtest_streamed"
+			],
+			[
+				"empty",
+				"empty_hsh"
+			],
+			[
+				"if",
+				"if\tConditional"
+			],
+			[
+				"for",
+				"foreach"
+			],
+			[
+				"is",
+				"is_deeply"
+			],
+			[
+				"ex",
+				"export"
+			],
+			[
+				"befor",
+				"beforeeach\tBefore Each"
+			],
+			[
+				"storage",
+				"storageName"
+			],
+			[
+				"befo",
+				"beforeeach\tBefore Each"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "inst",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 484.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/ericricketts/Documents/LaunchSchoolPrepAndSupplements"
+	],
+	"file_history":
+	[
+		"/Users/ericricketts/Documents/LearningRuby/literals/strings/strings_test.rb",
+		"/Users/ericricketts/Documents/LearningRuby/operations/test_integer_operations.rb",
+		"/Users/ericricketts/Documents/LearningRuby/literals/boolean_and_nil/true_false_test.rb",
+		"/Users/ericricketts/Documents/LearningRuby/operations/test_equality_comparison.rb",
+		"/Users/ericricketts/Documents/LearningRuby/regular_expressions/test_match_operator_and_method.rb",
+		"/Users/ericricketts/Documents/LearningRuby/literals/numbers/numbers_test.rb",
+		"/Users/ericricketts/Documents/LearningHTMLAndCSSAndJavascript/HTMLAndCSSAndJavascript/javascript/introduction-to-js-1/what-is-js/button.html",
+		"/Users/ericricketts/Documents/LearningHTMLAndCSSAndJavascript/HTMLAndCSSAndJavascript/javascript/introduction-to-js-1/what-is-js/button_test.js",
+		"/Users/ericricketts/Documents/LearningHTMLAndCSSAndJavascript/HTMLAndCSS/getting_started_with_html.html",
+		"/home/eric_ricketts/Documents/LearningPerl/variable_scope/test_variable_scope.pl",
+		"/home/eric_ricketts/hello.pl",
+		"/home/eric_ricketts/.cpanm/work/1496006055.31853/build.log",
+		"/home/eric_ricketts/Documents/LearningPerl/syntax/test1.pl",
+		"/home/eric_ricketts/Documents/LearningPerl/syntax/test1.t",
+		"/home/eric_ricketts/Documents/Javascript/MyReactProjects/hello-word/public/index.html",
+		"/home/eric_ricketts/Documents/Javascript/MyReactProjects/hello-word/src/logo.svg",
+		"/home/eric_ricketts/Documents/Javascript/kanban-app/app/libs/connect.jsx",
+		"/home/eric_ricketts/Documents/Javascript/kanban-app/app/stores/NoteStore.js",
+		"/home/eric_ricketts/Documents/Javascript/kanban-app/app/actions/NoteActions.js",
+		"/home/eric_ricketts/Documents/Javascript/kanban-app/app/components/Note.jsx",
+		"/home/eric_ricketts/Documents/Javascript/kanban-app/app/components/Notes.jsx",
+		"/home/eric_ricketts/Documents/Javascript/kanban-app/app/index.jsx",
+		"/home/eric_ricketts/Documents/Javascript/kanban-app/app/libs/persist.js",
+		"/home/eric_ricketts/Documents/Javascript/kanban-app/app/components/Editable.jsx",
+		"/home/eric_ricketts/Documents/Javascript/kanban-app/app/components/Provider/Provider.dev.jsx",
+		"/home/eric_ricketts/Documents/Javascript/kanban-app/app/libs/storage.js",
+		"/home/eric_ricketts/Documents/Javascript/YouDontKnowJavascript/README.md",
+		"/home/eric_ricketts/.git-credentials"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "launch-school-introduction-supplements.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"s",
+				"HTMLAndCSSAndJavascript/css/styling-text/style1.css"
+			],
+			[
+				"text",
+				"HTMLAndCSSAndJavascript/javascript/introduction-to-js-1/what-is-js/text_label.html"
+			],
+			[
+				"but",
+				"HTMLAndCSSAndJavascript/javascript/introduction-to-js-1/what-is-js/button.html"
+			],
+			[
+				"simp",
+				"lib/My/SimpleModule.pm"
+			],
+			[
+				".bash_per",
+				".bash_profile"
+			],
+			[
+				".bashr",
+				".bashrc"
+			],
+			[
+				"index.html",
+				"hello-word/public/index.html"
+			],
+			[
+				"index.js",
+				"hello-word/src/index.js"
+			],
+			[
+				"package.json",
+				"hello-word/package.json"
+			],
+			[
+				"app.js",
+				"src_users/components/App.js"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"lanestore",
+				"app/stores/LaneStore.js"
+			],
+			[
+				"lane",
+				"app/actions/LaneActions.js"
+			],
+			[
+				"note",
+				"app/components/Note.jsx"
+			],
+			[
+				"notes.",
+				"app/components/Notes.jsx"
+			],
+			[
+				"lanehea",
+				"app/components/LaneHeader.jsx"
+			],
+			[
+				"app.j",
+				"app/components/App.jsx"
+			],
+			[
+				"lanes",
+				"app/components/Lane.jsx"
+			],
+			[
+				"lanes.jsx",
+				"app/components/Lanes.jsx"
+			],
+			[
+				"con",
+				"app/libs/connect.jsx"
+			],
+			[
+				"notestore",
+				"app/stores/NoteStore.js"
+			],
+			[
+				"notea",
+				"app/actions/NoteActions.js"
+			],
+			[
+				"setup.js",
+				"app/components/Provider/setup.js"
+			],
+			[
+				"editable",
+				"app/components/Editable.jsx"
+			],
+			[
+				"notes",
+				"app/components/Notes.jsx"
+			],
+			[
+				"connect",
+				"app/libs/connect.jsx"
+			],
+			[
+				"app",
+				"app/components/App.jsx"
+			],
+			[
+				"provider",
+				"app/components/Provider/Provider.dev.jsx"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 335.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
