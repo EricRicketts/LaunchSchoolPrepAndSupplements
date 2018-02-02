@@ -65,4 +65,105 @@ Here is the algorithm
     assert_equal(expected, number_ary)
   end
 
+=begin
+Third Exercise
+
+Write a program that uses a hash to store a list of movie titles with the year they came out.
+Then use the puts command to make your program print out the year of each movie to the screen.
+The output for your program should look something like this.
+
+1975
+2004
+2013
+2001
+1981
+
+=end
+
+  def test_third_exercise_create_hash_literal
+    hsh = {
+      "One Flew over the Cuckoo's Nest" => 1975,
+      "Million Dollar Baby" => 2004,
+      "12 Years a Slave" => 2013,
+      "A Beautiful Mind" => 2001,
+      "Chariots of Fire" => 1981
+    }
+    expected = [1975, 2004, 2013, 2001, 1981]
+    keys = hsh.keys
+    keys.each.with_index do |key, i|
+      assert_equal(expected[i], hsh[key])
+    end
+  end
+
+=begin
+Fourth Exercise
+
+Use the dates from the previous example and store them in an array.
+Then make your program output the same thing as exercise 3.
+
+=end
+
+  def test_fourth_exercise_store_hash_values_in_array
+    hsh = {
+      "One Flew over the Cuckoo's Nest" => 1975,
+      "Million Dollar Baby" => 2004,
+      "12 Years a Slave" => 2013,
+      "A Beautiful Mind" => 2001,
+      "Chariots of Fire" => 1981
+    }
+    expected = [1975, 2004, 2013, 2001, 1981]
+    assert_equal(expected, hsh.values)
+  end
+
+=begin
+Fifth Exercise
+
+Write a program that outputs the factorial of the numbers 5, 6, 7, and 8.
+
+=end
+
+  def test_fifth_exercise_factorials
+    def factorial(n)
+      (1..n).to_a.inject(&:*)
+    end
+
+    expected = [120, 720, 5040, 40320]
+    (5..8).to_a.each.with_index do |num, i|
+      assert_equal(expected[i], factorial(num))
+    end
+  end
+
+=begin
+Sixth Exercise
+
+Write a program that calculates the squares of 3 float numbers
+of your choosing and outputs the result to the screen.
+
+=end
+
+  def test_sixth_exercise_squares
+    def square(n)
+      n**2
+    end
+
+    expected = [2.25, 6.25, 12.25]
+    ary = [1.5, 2.5, 3.5]
+    ary.each.with_index do |num, i|
+      assert_equal(expected[i], square(num))
+    end
+  end
+
+=begin
+Seventh Exercise
+
+SyntaxError: (irb):2: syntax error, unexpected ')', expecting '}'
+  from /usr/local/rvm/rubies/ruby-2.0.0-rc2/bin/irb:16:in `<main>'
+
+could have closed hash literal with a ')' instead of a '}'
+
+essential error is that there was an opening bracket without the
+corresponding closing bracket.
+
+=end
+
 end
