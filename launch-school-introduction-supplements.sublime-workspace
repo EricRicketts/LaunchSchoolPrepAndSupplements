@@ -99,6 +99,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "IntroductionToProgramming/basics/test_basics.rb",
+			"settings":
+			{
+				"buffer_size": 4090,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -136,10 +145,13 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/ericricketts/Documents/LaunchSchoolPrepAndSupplements"
+		"/Users/ericricketts/Documents/LaunchSchoolPrepAndSupplements",
+		"/Users/ericricketts/Documents/LaunchSchoolPrepAndSupplements/IntroductionToProgramming",
+		"/Users/ericricketts/Documents/LaunchSchoolPrepAndSupplements/IntroductionToProgramming/basics"
 	],
 	"file_history":
 	[
+		"/Volumes/DATA/IRS Account_files/irs_horiz_white.3f98f4a4.svg",
 		"/Users/ericricketts/Documents/LearningRuby/literals/strings/strings_test.rb",
 		"/Users/ericricketts/Documents/LearningRuby/operations/test_integer_operations.rb",
 		"/Users/ericricketts/Documents/LearningRuby/literals/boolean_and_nil/true_false_test.rb",
@@ -202,8 +214,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "IntroductionToProgramming/basics/test_basics.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4090,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4086,
+								4086
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
