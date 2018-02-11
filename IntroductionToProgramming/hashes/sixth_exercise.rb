@@ -1,6 +1,5 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'byebug'
 
 class SixthExercise < Minitest::Test
 
@@ -17,30 +16,26 @@ class SixthExercise < Minitest::Test
     end.values.uniq
   end
 
+  def anagram_two(words)
+    # this solution is based on the book solution, you only cycle through the
+    # given array one time where the anagram method in essence does it twice
+    result = {}
+    words.each do |word|
+      # sort the characters in the word to make a key
+      key = word.chars.sort.join.to_sym
+      # if the key is present after sorting the letters of the word then
+      # add the word to the array of anagrams for that word
+      result.has_key?(key) ? result[key].push(word) : result[key] = [word]
+    end
+    result
+  end
+
   def test_anagram
     expected = [["demo", "dome", "mode"], ["none", "neon"],
     ["tied", "diet", "edit", "tide"], ["evil", "live", "veil", "vile"],
     ["fowl", "wolf", "flow"]]
     assert_equal(expected, anagram(@words))
+    assert_equal(expected, anagram_two(@words).values)
   end
 
 end
-
-=begin
-# book solution, I like it better
-
-result = {}
-
-words.each do |word|
-  # alphabetize each word by sorting its characters
-  key = word.split('').sort.join
-  # if the key exists push it onto an array of anagrams
-  # if not add the key and the original word to the hash
-  if result.has_key?(key)
-    result[key].push(word)
-  else
-    result[key] = [word]
-  end
-end
-
-=end
