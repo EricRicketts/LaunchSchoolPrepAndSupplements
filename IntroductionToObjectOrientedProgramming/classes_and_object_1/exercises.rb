@@ -30,8 +30,9 @@ class MyCar
     @speed
   end
 
-  def spray_paint=(color)
+  def spray_paint(color)
     self.color = color
+    "With the spray paint the new color of your car is #{self.color}"
   end
 
 end
@@ -72,8 +73,8 @@ class Exercises < Minitest::Test
   end
 
   def test_spray_paint
-    @car.spray_paint = "Black"
-    assert("Black" == @car.color)
+    expected = "With the spray paint the new color of your car is Black"
+    assert(expected == @car.spray_paint("Black"))
   end
 
 end
