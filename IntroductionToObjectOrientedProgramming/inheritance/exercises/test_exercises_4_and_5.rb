@@ -11,7 +11,8 @@ end
 class Vehicle
   @@number_of_vehicles = 0
 
-  attr_reader :zero_to_sixty
+  attr_accessor :color
+  attr_reader :zero_to_sixty, :year, :model
 
   def self.number_of_vehicles
     @@number_of_vehicles
@@ -21,22 +22,41 @@ class Vehicle
     @@number_of_vehicles = 0
   end
 
-  def initialize
-    @movement = false
+  def initialize(year, model, color)
     @@number_of_vehicles += 1
+    @year = year
+    @model = model
+    @color = color
+    @current_speed = 0
+  end
+
+  def accelerate(number)
+    @current_speed += number  
+  end
+
+  def brake(number)
+    @current_speed -= number
+  end
+
+  def current_speed
+    @current_speed
+  end
+
+  def stop
+    @current_speed = 0
   end
 
   def stopped?
-    @movement
+    @current_speed == 0
   end
 
 end
 
 class MyCar < Vehicle
   include SpeedEnhancing
-  MAKE_OF_CAR = "Challenger"
+  NUMBER_OF_DOORS = 4
 
-  def initialize
+  def initialize(year, model, color)
     super
     @zero_to_sixty = 5.0
   end
@@ -44,11 +64,11 @@ class MyCar < Vehicle
 end
 
 class MyTruck < Vehicle
-  MAKE_OF_TRUCK = "F-150"
+  NUMBER_OF_DOORS = 2
 
   attr_reader :payload
 
-  def initialize
+  def initialize(year, model, color)
     super
     @zero_to_sixty = 7.0
     @payload = 2000
@@ -59,8 +79,8 @@ end
 class TestExercise1 < Minitest::Test
 
   def setup
-    @car = MyCar.new
-    @truck = MyTruck.new
+    @car = MyCar.new("1968", "Camaro", "Red")
+    @truck = MyTruck.new("2016", "F-150", "Black")
   end
 
   def teardown
@@ -68,15 +88,15 @@ class TestExercise1 < Minitest::Test
   end
 
   def test_common_attributes
-    assert(@car.stopped? == false && @truck.stopped? == false)
+    assert(@car.stopped? && @truck.stopped?)
   end
 
   def test_car_constant
-    assert_equal("Challenger", MyCar::MAKE_OF_CAR)
+    assert_equal(4, MyCar::NUMBER_OF_DOORS)
   end
 
   def test_truck_constant
-    assert_equal("F-150", MyTruck::MAKE_OF_TRUCK)
+    assert_equal(2, MyTruck::NUMBER_OF_DOORS)
   end
 
   def test_car_accelerate
@@ -88,9 +108,7 @@ class TestExercise1 < Minitest::Test
   end
 
   def test_number_of_vehicles
-    another_car = MyCar.new
-    another_truck = MyTruck.new
-    assert(Vehicle.number_of_vehicles == 4)
+    assert(Vehicle.number_of_vehicles == 2)
   end
 
   def test_faster_car
@@ -105,6 +123,17 @@ class TestExercise1 < Minitest::Test
     car_expected = [MyCar, SpeedEnhancing, Vehicle, Object, Kernel, BasicObject]
     truck_expected = [MyTruck, Vehicle, Object, Kernel, BasicObject]
     assert(car_expected == car_ancestors && truck_expected == truck_ancestors)
+  end
+
+  def test_speed_up
+    @car.accelerate(30)
+    assert_equal([30, false], [@car.current_speed, @car.stopped?])
+  end
+  
+  def test_brake
+    @truck.accelerate(30)
+    @truck.brake(10)
+    assert_equal(20, @truck.current_speed)
   end
   
 end
