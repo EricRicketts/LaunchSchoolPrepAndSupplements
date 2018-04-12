@@ -49,5 +49,33 @@ class Exercises < Minitest::Test
     assert([45, 46].include?(str.scan(my_regex).length))
     # a better regex would be /[^a-z]/i
   end
+
+  def test_exercise_seven
+    str = "aBc"
+    my_regex1 = Regexp.new(/(ABC|abc)/)
+    my_regex2 = Regexp.new(/[Aa][Bb][Cc]/)
+    refute(str.match(my_regex1))
+    assert(str.match(my_regex2))
+  end
+
+  def test_exercise_eight
+    # patterns are equivalent as specified
+    my_regex1 = Regexp.new(/abc/i)
+    my_regex2 = Regexp.new(/[aA][bB][cC]/)
+    str = "AbC"
+    assert(str.match(my_regex1))  
+    assert(str.match(my_regex2))  
+  end
+
+  def test_exercise_nine
+    str = "The regex /[^a-z]/i matches any character that is" + "\n" +
+      "not a letter. Similarly, /[^0-9]/ matches any" + "\n" +
+      "non-digit while /[^A-Z]/ matches any character" + "\n" +
+      "that is not an uppercase letter. Beware: /[^+-<]/" + "\n" +
+      "is at best obscure, and may even be wrong."
+    expected = ["[^a-z]", "[^0-9]", "[^A-Z]"]
+    my_regex = Regexp.new(/\[\^[aA0]\-[zZ9]\]/)
+    assert_equal(expected, str.scan(my_regex))
+  end
   
 end
