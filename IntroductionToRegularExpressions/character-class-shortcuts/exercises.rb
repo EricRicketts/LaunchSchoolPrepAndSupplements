@@ -32,5 +32,19 @@ class Exercises < Minitest::Test
     # Hup! because Hup is followed by a !.  Doc is not
     # matched because it is not preceeded by whitespace
   end
+
+  def test_exercise_three
+    str = "Hello 4567 bye CDEF - cdef" + "\n" +
+      "0x1234 0x5678 0xABCD" + "\n" + "1F8A done"
+    my_regex = /\s\h{4}\s/
+    assert_equal(4, str.scan(my_regex).length)
+  end
+  
+  def test_exercise_four
+    str = "The red d0g chases the b1ack cat." + "\n" +
+      "a_b c_d"
+    my_regex = /[a-zA-Z]{3}/
+    assert_equal(7, str.scan(my_regex).length)    
+  end
   
 end
