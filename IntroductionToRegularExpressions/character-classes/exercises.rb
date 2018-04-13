@@ -76,6 +76,7 @@ class Exercises < Minitest::Test
     expected = ["[^a-z]", "[^0-9]", "[^A-Z]"]
     my_regex = Regexp.new(/\[\^[aA0]\-[zZ9]\]/)
     assert_equal(expected, str.scan(my_regex))
+    # better solution from book /\[\^[0-9a-zA-Z]-[0-9a-zA-Z]\]/
   end
   
 end
