@@ -106,8 +106,8 @@ class Exercises < Minitest::Test
   
   def test_exercise_nine
     str = ",123,456,789,123,345,\n" + ",123,456,,789,123,\n" +
-    ",23,56,7,\n" + ",13,45,78,23,45,34,\n" + 
-    ",13,45,78,23,45,34,56,"
+      ",23,56,7,\n" + ",13,45,78,23,45,34,\n" + 
+      ",13,45,78,23,45,34,56,"
     my_regex = /(^,(\d+,){3,6}$)/
     expected = [",123,456,789,123,345,", ",23,56,7,", ",13,45,78,23,45,34,"]
     result = str.scan(my_regex).map {|m| m[0]}
@@ -115,15 +115,39 @@ class Exercises < Minitest::Test
   end
   
   def test_exercise_ten
-    
+    str = "123,456,789,123,345\n" + "123,456,,789,123\n" +
+      "23,56,7\n" + "13,45,78,23,45,34\n" + 
+      "13,45,78,23,45,34,56"
+    my_regex = /(^(\d+,)(\d+,){1,4}\d+$)/
+    book_regex = /(^(\d+,){2,5}\d+$)/
+    expected = ["123,456,789,123,345", "23,56,7", "13,45,78,23,45,34"]
+    result = str.scan(my_regex).map {|m| m[0]}
+    book_result = str.scan(book_regex).map {|m| m[0]}
+    assert_equal(expected, result)
+    assert_equal(expected, book_result)   
   end
   
   def test_exercise_eleven
-    
+    str = "123,456,789,123,345\n" + "123,456,,789,123\n" +
+      "23,56,7\n" + "13,45,78,23,45,34\n" + 
+      "13,45,78,23,45,34,56"
+    my_regex = /((^(\d+,){2}|^(\d+,){5,})\d+$)/
+    book_regex = /(^(\d+,){2}((\d+,){3,})?\d+$)/ # I really like this solution
+    # so we start with 2 number comma patterns and then we throw in 3 or more
+    # number comma patterns repeated 0 or 1 time and then we end with numbers
+    # and no comma
+    expected = ["23,56,7", "13,45,78,23,45,34", "13,45,78,23,45,34,56"]
+    result = str.scan(my_regex).map {|m| m[0]}
+    book_result = str.scan(book_regex).map {|m| m[0]}
+    assert_equal(expected, result)
+    assert_equal(expected, book_result)
   end
   
   def test_exercise_twelve
-    
+    str = "<h1>Main Heading</h1><h1>Another Main Heading</h1>"
+    my_regex = /<[hH]1>.*?<\/[hH]1>/
+    expected = ["<h1>Main Heading</h1>", "<h1>Another Main Heading</h1>"]
+    assert_equal(expected, str.scan(my_regex))    
   end
   
 end
