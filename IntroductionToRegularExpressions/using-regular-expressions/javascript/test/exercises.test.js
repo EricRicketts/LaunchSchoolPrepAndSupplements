@@ -25,6 +25,10 @@ describe('Exercises for Using Regular Expressions Chapter in Introduction To Reg
         return str.replace(/\b(apple|blueberry|cherry)\b/, "danish");
     }
 
+    function formatDate(date) {
+        return date.replace(/(\d{4})(-)(\d{2})(-)(\d{2})/, '$5.$3.$1');
+    }
+
     it('testing URLs', function () {
         var urls = ['http://launchschool.com', 'https://example.com',
             'https://example.com hello', '   https://example.com'];
@@ -89,6 +93,18 @@ describe('Exercises for Using Regular Expressions Chapter in Introduction To Reg
             'I love pineapple'
         ];
         expect(expected).to.deep.equal(strs.map(danish));
+    });
+
+    it('testing formatDate', function () {
+        var dates = [
+            '2017-06-17',
+            '2016/06/17'
+        ];    
+        var expected = [
+            '17.06.2017',
+            '2016/06/17'
+        ];
+        expect(expected).to.deep.equal(dates.map(formatDate));
     });
     
 });

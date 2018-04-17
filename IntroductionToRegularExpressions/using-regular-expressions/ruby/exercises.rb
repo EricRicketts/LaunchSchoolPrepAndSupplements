@@ -24,6 +24,11 @@ class Exercises < Minitest::Test
     str.sub(/\b(apple|blueberry|cherry)\b/, 'danish')
   end
 
+  def format_date(date)
+    regex = /(\d{4})(-)(\d{2})(-)(\d{2})/
+    date.match?(regex) ? date.sub(regex, '\5.\3.\1') : date
+  end
+
   def test_url
     urls = ['http://launchschool.com', 'https://example.com',
       'https://example.com hello', '   https://example.com']
@@ -88,6 +93,18 @@ class Exercises < Minitest::Test
       'I love pineapple'
     ]
     assert_equal(expected, strs.map {|str| danish(str)})
+  end
+
+  def test_format_date
+    dates = [
+      '2017-06-17',
+      '2016/06/17'
+    ]    
+    expected = [
+      '17.06.2017',
+      '2016/06/17'
+    ]
+    assert_equal(expected, dates.map {|date| format_date(date)})    
   end
   
 end
