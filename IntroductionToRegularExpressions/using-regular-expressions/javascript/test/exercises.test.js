@@ -13,6 +13,14 @@ describe('Exercises for Using Regular Expressions Chapter in Introduction To Reg
         return str.split(/\W+/);
     }
 
+    function mysteryMath(str) {
+        return str.replace(/[+*\-\/]/, "?");
+    }
+
+    function mysteriousMath(str) {
+        return str.replace(/[+*\-\/]/g, "?");
+    }
+
     it('testing URLs', function () {
         var urls = ['http://launchschool.com', 'https://example.com',
             'https://example.com hello', '   https://example.com'];
@@ -29,6 +37,36 @@ describe('Exercises for Using Regular Expressions Chapter in Introduction To Reg
             ["Pete", "201"]
         ];
         expect(expected).to.deep.equal(strs.map(fields));
+    });
+
+    it('testing mysteryMath', function () {
+        var expressions = [
+            '4 + 3 - 5 = 2',
+            '4 - 3 - 5 = -4',
+            '4 * 3 - 5 = 7',
+            '4 / 2 - 5 = -3',
+            '(4 * 3 + 2) / 7 - 1 = 1'
+        ];
+        var expected = [
+            '4 ? 3 - 5 = 2',
+            '4 ? 3 - 5 = -4',
+            '4 ? 3 - 5 = 7',
+            '4 ? 2 - 5 = -3',
+            '(4 ? 3 + 2) / 7 - 1 = 1'
+        ];
+        expect(expected).to.deep.equal(expressions.map(mysteryMath));
+    });
+
+    it('testing mysteriousMath', function () {
+        var expressions = [
+            '4 + 3 - 5 = 2',
+            '(4 * 3 + 2) / 7 - 1 = 1'
+        ];
+        var expected = [
+            '4 ? 3 ? 5 = 2',
+            '(4 ? 3 ? 2) ? 7 ? 1 = 1'
+        ];
+        expect(expected).to.deep.equal(expressions.map(mysteriousMath));
     });
     
 });

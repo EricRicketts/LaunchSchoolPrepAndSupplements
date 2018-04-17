@@ -12,6 +12,14 @@ class Exercises < Minitest::Test
     str.split(/\W+/)
   end
 
+  def mystery_math(str)
+    str.sub(/[+\-*\/]/, "?")
+  end
+
+  def mysterious_math(str)
+    str.gsub(/[+*\-\/]/, "?")
+  end
+
   def test_url
     urls = ['http://launchschool.com', 'https://example.com',
       'https://example.com hello', '   https://example.com']
@@ -28,6 +36,36 @@ class Exercises < Minitest::Test
       ["Pete", "201"]
     ]
     assert_equal(expected, strs.map {|str| fields(str)})
+  end
+
+  def test_mystery_math
+    expressions = [
+      '4 + 3 - 5 = 2',
+      '4 - 3 - 5 = -4',
+      '4 * 3 - 5 = 7',
+      '4 / 2 - 5 = -3',
+      '(4 * 3 + 2) / 7 - 1 = 1'
+    ]
+    expected = [
+      '4 ? 3 - 5 = 2',
+      '4 ? 3 - 5 = -4',
+      '4 ? 3 - 5 = 7',
+      '4 ? 2 - 5 = -3',
+      '(4 ? 3 + 2) / 7 - 1 = 1'
+    ]
+    assert_equal(expected, expressions.map {|str| mystery_math(str)}) 
+  end
+
+  def test_mysterious_math
+    expressions = [
+      '4 + 3 - 5 = 2',
+      '(4 * 3 + 2) / 7 - 1 = 1'
+    ]
+    expected = [
+      '4 ? 3 ? 5 = 2',
+      '(4 ? 3 ? 2) ? 7 ? 1 = 1'
+    ]
+    assert_equal(expected, expressions.map {|str| mysterious_math(str)})    
   end
   
 end
