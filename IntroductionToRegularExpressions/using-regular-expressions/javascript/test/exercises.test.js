@@ -29,6 +29,10 @@ describe('Exercises for Using Regular Expressions Chapter in Introduction To Reg
         return date.replace(/(\d{4})(-)(\d{2})(-)(\d{2})/, '$5.$3.$1');
     }
 
+    function newFormatDate(date) {
+        return date.replace(/^(\d{4})([\-\/])(\d{2})(\2)(\d{2})$/, '$5.$3.$1');
+    }
+
     it('testing URLs', function () {
         var urls = ['http://launchschool.com', 'https://example.com',
             'https://example.com hello', '   https://example.com'];
@@ -105,6 +109,20 @@ describe('Exercises for Using Regular Expressions Chapter in Introduction To Reg
             '2016/06/17'
         ];
         expect(expected).to.deep.equal(dates.map(formatDate));
+    });
+
+    it('testing newFormatDate', function () {
+        var dates = [
+            '2016-06-17',
+            '2017/05/03',
+            '2015/01-31'
+        ];
+        var expected = [
+            '17.06.2016',
+            '03.05.2017',
+            '2015/01-31'
+        ];
+        expect(expected).to.deep.equal(dates.map(newFormatDate));
     });
     
 });

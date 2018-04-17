@@ -25,8 +25,13 @@ class Exercises < Minitest::Test
   end
 
   def format_date(date)
-    regex = /(\d{4})(-)(\d{2})(-)(\d{2})/
+    regex = /\A(\d{4})(-)(\d{2})(-)(\d{2})\z/
     date.match?(regex) ? date.sub(regex, '\5.\3.\1') : date
+  end
+
+  def new_format_date(date)
+    regex = /\A(\d{4})([\-\/])(\d{2})(\2)(\d{2})\z/
+    date.match?(regex) ? date.sub(regex, '\5.\3.\1') : date    
   end
 
   def test_url
@@ -105,6 +110,20 @@ class Exercises < Minitest::Test
       '2016/06/17'
     ]
     assert_equal(expected, dates.map {|date| format_date(date)})    
+  end
+
+  def test_new_format_date
+    dates = [
+      '2016-06-17',
+      '2017/05/03',
+      '2015/01-31'
+    ]
+    expected = [
+      '17.06.2016',
+      '03.05.2017',
+      '2015/01-31'
+    ]
+    assert_equal(expected, dates.map {|date| new_format_date(date)})
   end
   
 end
