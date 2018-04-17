@@ -21,6 +21,10 @@ describe('Exercises for Using Regular Expressions Chapter in Introduction To Reg
         return str.replace(/[+*\-\/]/g, "?");
     }
 
+    function danish(str) {
+        return str.replace(/\b(apple|blueberry|cherry)\b/, "danish");
+    }
+
     it('testing URLs', function () {
         var urls = ['http://launchschool.com', 'https://example.com',
             'https://example.com hello', '   https://example.com'];
@@ -67,6 +71,24 @@ describe('Exercises for Using Regular Expressions Chapter in Introduction To Reg
             '(4 ? 3 ? 2) ? 7 ? 1 = 1'
         ];
         expect(expected).to.deep.equal(expressions.map(mysteriousMath));
+    });
+
+    it('testing danish', function () {
+        var strs = [
+            'An apple a day keeps the doctor away',
+            'My favorite is blueberry pie',
+            'The cherry of my eye',
+            'apple. cherry. blueberry.',
+            'I love pineapple'
+        ];
+        var expected = [
+            'An danish a day keeps the doctor away',
+            'My favorite is danish pie',
+            'The danish of my eye',
+            'danish. cherry. blueberry.',
+            'I love pineapple'
+        ];
+        expect(expected).to.deep.equal(strs.map(danish));
     });
     
 });

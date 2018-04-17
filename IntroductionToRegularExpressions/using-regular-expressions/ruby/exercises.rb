@@ -20,6 +20,10 @@ class Exercises < Minitest::Test
     str.gsub(/[+*\-\/]/, "?")
   end
 
+  def danish(str)
+    str.sub(/\b(apple|blueberry|cherry)\b/, 'danish')
+  end
+
   def test_url
     urls = ['http://launchschool.com', 'https://example.com',
       'https://example.com hello', '   https://example.com']
@@ -66,6 +70,24 @@ class Exercises < Minitest::Test
       '(4 ? 3 ? 2) ? 7 ? 1 = 1'
     ]
     assert_equal(expected, expressions.map {|str| mysterious_math(str)})    
+  end
+
+  def test_danish
+    strs = [
+      'An apple a day keeps the doctor away',
+      'My favorite is blueberry pie',
+      'The cherry of my eye',
+      'apple. cherry. blueberry.',
+      'I love pineapple'
+    ]
+    expected = [
+      'An danish a day keeps the doctor away',
+      'My favorite is danish pie',
+      'The danish of my eye',
+      'danish. cherry. blueberry.',
+      'I love pineapple'
+    ]
+    assert_equal(expected, strs.map {|str| danish(str)})
   end
   
 end
