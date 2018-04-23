@@ -1,0 +1,18 @@
+1.  For written material try the SQ3R method, survey the material for main topics, then write down the main topics in the form
+of a question.  Then record your answers under each question.  After you have finished recording your answers, write a summary
+from memory, and finally review your notes to make sure you did not miss anything.  SQ3R stands for Survey, Question, Read,
+Recite, and Review.
+
+This method is very well suited to dense material, like programming books or classes, because it forces you to filter the
+material as you read it and come up with what you consider to be the most important concepts.
+
+2.  Mapping - this might be good to try to get "the big picture".  It is visual in nature, in that one starts with a concept
+in the center of the page, which is drawn with a box around it.  Then you branch of from the box with lines or arrows into
+sub-concpets which are enclosed in an oval.  In turn, each of these ovals can have additional sub-concepts attached to them.
+I think this might be helpful when learning something new, like HTTP, which has a lot of steps associated with the entire
+process.  This way, I can capture the flow of the most important ideas.  The XMind software helps make these diagrams.
+
+3.  Cornell - If taking notes on a paper, divide the paper vertically into two sections.  2 and 1/2 inches from the left is your
+"Cues" section, the remaining 6 inches is your note taking section.  As you take notes in the not taking section, jot down themes
+or big picture ideas in your "Cues" section, this way you systematically group your notes as you go.  I can see how this can be
+combined with the SQ3R method.  Also, the Cornell method advocates a Summary at the end of a given section of notes.    
